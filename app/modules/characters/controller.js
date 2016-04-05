@@ -15,13 +15,12 @@ class CharactersController {
 
 				this.id = response.data.data.results[0].id;
 				this.description = response.data.data.results[0].description;
-				this.image = `${response.data.data.results[0].thumbnail.path}.${response.data.data.results[0].thumbnail.extension}`;
-
-				this._$http
-					.get(`http://gateway.marvel.com/v1/public/characters/${this.id}/events?apikey=6e7bd33438a14b84d91097cd3cfc46b5`)
-					.then((response) => {
-						this.events = response.data.data.results;
-				});
+				this.image = `${response.data.data.results[0].thumbnail.path}.${response.data.data.results[0].thumbnail.extension}`;	
+		});
+		this._$http
+			.get(`http://gateway.marvel.com/v1/public/characters/${this.id}/events?apikey=6e7bd33438a14b84d91097cd3cfc46b5`)
+			.then((response) => {
+				this.events = response.data.data.results;
 		});
   }
 }
