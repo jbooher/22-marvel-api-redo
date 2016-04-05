@@ -38,9 +38,11 @@ a {
       transition: box-shadow, 1s; }
   .character--name, .character--title, .event--name, .event--title {
     width: 100%;
+    margin-top: 20px;
     text-align: center; }
   .character--description, .event--description {
     width: 100%;
+    margin-top: 20px;
     text-align: justify; }
 
 .characters, .events {
