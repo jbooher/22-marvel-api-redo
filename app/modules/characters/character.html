@@ -9,8 +9,11 @@
   <ul class="events--list">
 
     <li ng-repeat="event in charCtrl.events" class="events--event">
-      <img ng-src="{{ event.thumbnail.path + '.' + event.thumbnail.extension }}" class="events--image">
-      <h2 class="events--title">{{event.title}}</h2>
+
+      <a class="events--link" ui-sref="events({id: event.id})">
+        <img ng-src="{{ event.thumbnail.path + '.' + event.thumbnail.extension }}" class="events--image">
+        <h2 class="events--title">{{event.title}}</h2>
+      </a>
 
     </li>
 

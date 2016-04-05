@@ -3,3 +3,20 @@
   <h1 class="event--title">{{eventCtrl.title}}</h1>
   <p class="event--description">{{eventCtrl.description}}</p>
 </div>
+
+<div class="characters">
+
+  <ul class="characters--list">
+
+    <li ng-repeat="character in eventCtrl.characters" class="characters--character">
+
+      <a class="characters--link" ui-sref="characters({character: character.name})">
+        <img ng-src="{{ character.thumbnail.path + '.' + character.thumbnail.extension }}" class="characters--image">
+        <h2 class="characters--name">{{character.name}}</h2>
+      </a>
+
+    </li>
+
+  </ul>
+
+</div>
