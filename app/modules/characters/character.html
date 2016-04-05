@@ -1,0 +1,19 @@
+<div class="character">
+  <img class="character--image" ng-src="{{charCtrl.image}}">
+  <h1 class="character--name">{{charCtrl.name}}</h1>
+  <p class="character--description">{{charCtrl.description}}</p>
+</div>
+
+<div class="events">
+
+  <ul class="events--list">
+
+    <li ng-repeat="event in charCtrl.events" class="events--event">
+      <img ng-src="{{ event.thumbnail.path + '.' + event.thumbnail.extension }}" class="events--image">
+      <h2 class="events--title">{{event.title}}</h2>
+
+    </li>
+
+  </ul>
+
+</div>
